@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--
+IMPORTANT:
+Start from the previous Musical assignment project you've created on M2-D2
+    
+ASSIGNMENT RULES
+- The project must be pushed to a new repository and linked in EduFlow by the end of the day.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided and documentation.
+- To test the page, open it with your browser and inspect it with developer tools / device emulator.
+- Use Bootstrap4.6 classes to create the page.
+- Use containers, rows and cols in order to achieve a great responsive layout.
+
+NOTE:
+Most of the requirements in this exercises reference a bootstrap's functionality or component. 
+Make sure you check the documentation before creting anything custom.
+-->
+
+<html>
+  <head>
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      h1 {
+        color: rgb(161, 63, 124);
+      }
+      .jumbotron {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .eraser-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .btn {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        opacity: 1;
+        border: 1px solid brown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- EXERCISE 1
+        Create a Jumbotron section with a quick explanation / image of the website.
+        Make it appear with a fade-in animation effect when the page loads.
+    -->
+    <h1>Exercise 1</h1>
+    <div id="testOfFade" class="jumbotron" style="width: 500px">
+      <h1 class="display-4" style="color: rgb(10, 9, 8)">Hello, world!</h1>
+      <p class="lead">
+        This is a simple hero unit, a simple jumbotron-style component for
+        calling extra attention to featured content or information.
+      </p>
+      <hr class="my-4" />
+      <p>
+        It uses utility classes for typography and spacing to space content out
+        within the larger container.
+      </p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+    <hr />
+
+    <!-- EXERCISE 2
+        Use a Bootstrap Card to contain every album in the favorite list you previously created.
+        Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
+    -->
+    <!-- EXERCISE 3
+        Foreach album in the favorite list, place a badge on the top-left corner of the album with the genre of the music
+    -->
+    <h1>Exercise 2</h1>
+    <h3>Songs of album DIVIDE</h3>
+    <div class="row">
+      <div class="card ml-4" style="width: 20rem">
+        <img
+          src="https://i.ytimg.com/vi/OjGrcJ4lZCc/hqdefault.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <img
+          src="https://images.genius.com/9bcaf1be8df528ba0585e13fecf9b890.1000x1000x1.png"
+          class="eraser-badge"
+          height="30px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Eraser</h5>
+          <p class="card-text">
+            "Eraser" is a song by English singer-songwriter Ed Sheeran from his
+            third studio album ÷ (2017).It was written and produced by Sheeran
+            and Johnny McDaid. After the album's release, it charted at number
+            14 on the UK Singles Chart
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Recorded: 2016</li>
+          <li class="list-group-item">Genre: Acoustic hip hop</li>
+          <li class="list-group-item">Songwriter: Ed SheeranJohnny</li>
+        </ul>
+        <div class="card-body">
+          <a
+            href="https://en.wikipedia.org/wiki/Eraser_(Ed_Sheeran_song)"
+            class="card-link"
+            >Know more</a
+          >
+        </div>
+      </div>
+
+      <div class="card ml-4" style="width: 20rem">
+        <img
+          src="https://i.ytimg.com/vi/7Qp5vcuMIlk/hqdefault.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <img
+          src="https://images.genius.com/9bcaf1be8df528ba0585e13fecf9b890.1000x1000x1.png"
+          class="eraser-badge"
+          height="30px"
+        />
+
+        <div class="card-body">
+          <h5 class="card-title">Castle On The Hill</h5>
+          <p class="card-text">
+            "Castle on the Hill" is a song by English singer-songwriter Ed
+            Sheeran. It was released on 6 January 2017 as one of the double lead
+            singles from his third studio album ÷ (2017), along with "Shape of
+            You". "Castle on the Hill" was written by Ed Sheeran
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Released: 6 January 2017</li>
+          <li class="list-group-item">Genre: Folk , pop , rock</li>
+          <li class="list-group-item">Length: 4:21</li>
+        </ul>
+        <div class="card-body">
+          <a
+            href="https://en.wikipedia.org/wiki/Castle_on_the_Hill"
+            class="card-link"
+            >Know more</a
+          >
+        </div>
+      </div>
+
+      <div class="card ml-4" style="width: 20rem">
+        <img
+          src="https://i.ytimg.com/vi/iKzRIweSBLA/hqdefault.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <img
+          src="https://images.genius.com/9bcaf1be8df528ba0585e13fecf9b890.1000x1000x1.png"
+          class="eraser-badge"
+          height="30px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Perfect</h5>
+          <p class="card-text">
+            "Perfect" is a song by English singer-songwriter Ed Sheeran from his
+            third studio album, ÷ (2017).After the album's release, it charted
+            at number four on the UK Singles Chart.On 21 August 2017, Billboard
+            announced that would be the fourth single.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Released: 26 September 2017</li>
+          <li class="list-group-item">Songwriter: Ed Sheeran</li>
+          <li class="list-group-item">Length: 4:23</li>
+        </ul>
+        <div class="card-body">
+          <a
+            href="https://en.wikipedia.org/wiki/Perfect_(Ed_Sheeran_song)"
+            class="card-link"
+            >Know more</a
+          >
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- EXERCISE 4
+        Create a new section with an album tracklist inside a Bootstrap table.
+        The row colors of the table must be alternated.
+
+        There should be a column for the track order number, one for the title and one for the track duration.
+        (If you want, you can also add extra columns)
+    -->
+    <h1>Exercise 3</h1>
+    <h3>Divide Album Tracklist</h3>
+    <table class="table table-striped table-danger">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Title</th>
+          <th scope="col">Writter</th>
+          <th scope="col">length/th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            1
+            <button
+              class="btn shadow-1-strong rounded"
+              style="background-color: rgb(245, 94, 120)"
+            >
+              Click me
+            </button>
+          </th>
+          <td>Eraser</td>
+          <td>Ed SheeranJohnny McDaid</td>
+          <td>3:47</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            2
+            <button class="btn" style="background-color: rgb(245, 94, 120)">
+              Click me
+            </button>
+          </th>
+          <td>Castle On The Hill</td>
+          <td>Benny BlancoEd Sheeran</td>
+          <td>4:21</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            3
+            <button class="btn" style="background-color: rgb(245, 94, 120)">
+              Click me
+            </button>
+          </th>
+          <td>Dive</td>
+          <td>Ed SheeranJulia Michaels</td>
+          <td>3:58</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- EXERCISE 5
+        Add a DELETE bootstrap button at the end of each row of the tracklist. 
+        Attach the functionality to remove its row when it gets clicked. (Requires DOM manipulation)  
+
+        ## EXTRA CSS CHALLENGE ##
+        Make only one button visible at a time, for each row, when the single row gets hovered. 
+        Animate it with a fade-in effect upon the user hovering and fade-out when he/she goes away from it.
+    -->
+
+    <!-- EXERCISE 6
+        Add an "Add Track" button under the tracklist of the album. 
+        It should have a nice shadow transition when its hovered (with the box-shadow property) 
+        to look like as if the button was elevating itself.
+    -->
+
+    <!-- EXERCISE 7
+        On the click of "Add Track" button, a modal should appear.
+        (check in the documentation the modal + button example)
+        
+        The modal shall contain single input fields (avoid using a <form> to wrap the inputs) with:
+        - Track number
+        - Track title
+        - Track duration
+
+        The fields should be inside an Input Group and divided in 2 columns.
+    -->
+
+    <!-- ############### -->
+    <!-- ###  EXTRA  ### -->
+    <!-- ############### -->
+
+    <!-- EXERCISE 8
+        The modal should contain 2 buttons at the bottom:
+        - Add => Adds a new track in the tracklist with the data of the input fields.
+        - Close => closes the modal
+
+        https://getbootstrap.com/docs/4.6/components/alerts/
+        [EXTRA] Make the message disappear after 5 seconds
+        https://www.w3schools.com/jsref/met_win_settimeout.asp
+    -->
+
+    <!-- EXERCISE 9
+        Alert the user with a success message when the track gets added, or when a track gets deleted.
+     -->
+
+    <!-- EXERCISE 10
+        Considering the "Add Track" functionality that you've created on ex. 8: 
+         - The new list-element added to the list should appear with a fade-in effect
+     -->
+
+    <!-- EXERCISE 11
+        Considering the button you've created in ex. 5 that deletes the row:
+        Add a fade-out effect to the row before it gets removed, using a CSS transition effect
+    -->
+  </body>
+</html>
